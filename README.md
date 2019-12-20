@@ -10,8 +10,11 @@ You can find more information about the project [here](https://cs.fablearn.org/p
 The Project.Rmd template works best when you have jupyter notebook extensions on. You can read more about these: https://jupyter-contrib-nbextensions.readthedocs.io/ 
 
 To install, type this into your terminal:
+
 `pip install jupyter_contrib_nbextensions`
+
 `pip install jupyter_nbextensions_configurator`
+
 `jupyter nbextensions_configurator enable --user`
 
 Follow the instructions here: 
