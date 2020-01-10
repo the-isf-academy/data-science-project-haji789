@@ -12,11 +12,6 @@ jupyter:
     name: python3
 ---
 
-<!-- #region {"toc": true} -->
-<h1>Table of Contents<span class="tocSkip"></span></h1>
-<div class="toc"><ul class="toc-item"><li><span><a href="#Introduction" data-toc-modified-id="Introduction-1"><span class="toc-item-num">1&nbsp;&nbsp;</span>Introduction</a></span><ul class="toc-item"><li><span><a href="#Overarching-Question:-[EDIT-ME]" data-toc-modified-id="Overarching-Question:-[EDIT-ME]-1.1"><span class="toc-item-num">1.1&nbsp;&nbsp;</span>Overarching Question: [EDIT ME]</a></span></li></ul></li><li><span><a href="#Data" data-toc-modified-id="Data-2"><span class="toc-item-num">2&nbsp;&nbsp;</span>Data</a></span></li><li><span><a href="#Subquestions" data-toc-modified-id="Subquestions-3"><span class="toc-item-num">3&nbsp;&nbsp;</span>Subquestions</a></span></li><li><span><a href="#Methods-and-Results" data-toc-modified-id="Methods-and-Results-4"><span class="toc-item-num">4&nbsp;&nbsp;</span>Methods and Results</a></span><ul class="toc-item"><li><span><a href="#First-Research-Question-[Edit-me]" data-toc-modified-id="First-Research-Question-[Edit-me]-4.1"><span class="toc-item-num">4.1&nbsp;&nbsp;</span>First Research Question [Edit me]</a></span><ul class="toc-item"><li><span><a href="#Methods" data-toc-modified-id="Methods-4.1.1"><span class="toc-item-num">4.1.1&nbsp;&nbsp;</span>Methods</a></span></li><li><span><a href="#Results" data-toc-modified-id="Results-4.1.2"><span class="toc-item-num">4.1.2&nbsp;&nbsp;</span>Results</a></span></li></ul></li><li><span><a href="#Second-Research-Question-[Edit-me]" data-toc-modified-id="Second-Research-Question-[Edit-me]-4.2"><span class="toc-item-num">4.2&nbsp;&nbsp;</span>Second Research Question [Edit me]</a></span><ul class="toc-item"><li><span><a href="#Methods" data-toc-modified-id="Methods-4.2.1"><span class="toc-item-num">4.2.1&nbsp;&nbsp;</span>Methods</a></span></li><li><span><a href="#Results" data-toc-modified-id="Results-4.2.2"><span class="toc-item-num">4.2.2&nbsp;&nbsp;</span>Results</a></span></li></ul></li><li><span><a href="#Third-Research-Question-[Edit-me]" data-toc-modified-id="Third-Research-Question-[Edit-me]-4.3"><span class="toc-item-num">4.3&nbsp;&nbsp;</span>Third Research Question [Edit me]</a></span><ul class="toc-item"><li><span><a href="#Methods" data-toc-modified-id="Methods-4.3.1"><span class="toc-item-num">4.3.1&nbsp;&nbsp;</span>Methods</a></span></li><li><span><a href="#Results" data-toc-modified-id="Results-4.3.2"><span class="toc-item-num">4.3.2&nbsp;&nbsp;</span>Results</a></span></li></ul></li></ul></li><li><span><a href="#Discussion" data-toc-modified-id="Discussion-5"><span class="toc-item-num">5&nbsp;&nbsp;</span>Discussion</a></span><ul class="toc-item"><li><span><a href="#Summary" data-toc-modified-id="Summary-5.1"><span class="toc-item-num">5.1&nbsp;&nbsp;</span>Summary</a></span></li><li><span><a href="#Considerations" data-toc-modified-id="Considerations-5.2"><span class="toc-item-num">5.2&nbsp;&nbsp;</span>Considerations</a></span></li><li><span><a href="#Next-Steps" data-toc-modified-id="Next-Steps-5.3"><span class="toc-item-num">5.3&nbsp;&nbsp;</span>Next Steps</a></span></li></ul></li></ul></div>
-<!-- #endregion -->
-
 <!-- #region {"heading_collapsed": true} -->
 # Introduction
 <!-- #endregion -->
@@ -74,39 +69,31 @@ Be sure to explain how this data was collected, who this data was collected from
 List at least 3 questions that you could answer given the maths and data science tools you know. 
 Your answer here:
 
-<!-- #region {"heading_collapsed": true} -->
-# Methods and Results
-<!-- #endregion -->
 
-```{python hidden=TRUE}
+# Methods and Results
+
+```{python}
 #Import any helper files you need here
 ```
 
-<!-- #region {"heading_collapsed": true, "hidden": true} -->
-## First Research Question [Edit me]
-<!-- #endregion -->
+## Which block(A Block, B Block, C Block, etc.) in our school uses the most energy on extra energy consumers?
 
-<!-- #region {"heading_collapsed": true, "hidden": true} -->
+
 ### Methods
-<!-- #endregion -->
 
-<!-- #region {"hidden": true} -->
+
 **How will you approach this question? What data science tools/functions will you use, and why?**
-<!-- #endregion -->
 
-<!-- #region {"hidden": true} -->
-Your answer here:
-<!-- #endregion -->
 
-<!-- #region {"hidden": true} -->
+I will approach this question by comparing the five buildings/blocks with the amount of energy that is used for each one on their extra energy consumers. A bar graph will be used to represent the data, as I believe that it is the graph type that is most capable of clearly showing the differences in the values that each building/block uses.
+
+
 **Which data will you use, and how will you reorganize / store this data?**
-<!-- #endregion -->
 
-<!-- #region {"hidden": true} -->
-Your answer here:
-<!-- #endregion -->
 
-<!-- #region {"heading_collapsed": true, "hidden": true} -->
+
+
+<!-- #region {"heading_collapsed": true} -->
 ### Results 
 <!-- #endregion -->
 
@@ -118,8 +105,8 @@ Your answer here:
 Your answer here: 
 <!-- #endregion -->
 
-<!-- #region {"heading_collapsed": true, "hidden": true} -->
-## Second Research Question [Edit me]
+<!-- #region {"heading_collapsed": true} -->
+## Which extra energy consumer( air conditioners, heaters, lights) uses the most energy in our school?
 <!-- #endregion -->
 
 <!-- #region {"heading_collapsed": true, "hidden": true} -->
@@ -140,39 +127,6 @@ Your answer here:
 
 <!-- #region {"hidden": true} -->
 Your answer here:
-<!-- #endregion -->
-
-<!-- #region {"hidden": true} -->
-### Results 
-<!-- #endregion -->
-
-<!-- #region {"hidden": true} -->
-**Include cells here to show the results, which could be either a calculation or a visualization.** 
-<!-- #endregion -->
-
-<!-- #region {"heading_collapsed": true, "hidden": true} -->
-## Third Research Question [Edit me]
-<!-- #endregion -->
-
-<!-- #region {"hidden": true} -->
-### Methods
-<!-- #endregion -->
-
-<!-- #region {"hidden": true} -->
-**How will you approach this question? What data science tools/functions will you use, and why?**
-<!-- #endregion -->
-
-<!-- #region {"hidden": true} -->
-Your answer here:
-<!-- #endregion -->
-
-<!-- #region {"hidden": true} -->
-**Which data will you use, and how will you reorganize / store this data?**
-<!-- #endregion -->
-
-<!-- #region {"hidden": true} -->
-Your answer here:
-
 <!-- #endregion -->
 
 <!-- #region {"hidden": true} -->
@@ -184,10 +138,42 @@ Your answer here:
 <!-- #endregion -->
 
 <!-- #region {"heading_collapsed": true} -->
-# Discussion
+## What are the differences between schools energy use on extra energy consumers when compared to the government statistics on Hong Kong’s educational systems?
+
 <!-- #endregion -->
 
-<!-- #region {"heading_collapsed": true, "hidden": true} -->
+<!-- #region {"hidden": true} -->
+### Methods
+<!-- #endregion -->
+
+<!-- #region {"hidden": true} -->
+**How will you approach this question? What data science tools/functions will you use, and why?**
+<!-- #endregion -->
+
+<!-- #region {"hidden": true} -->
+Your answer here:
+<!-- #endregion -->
+
+<!-- #region {"hidden": true} -->
+**Which data will you use, and how will you reorganize / store this data?**
+<!-- #endregion -->
+
+<!-- #region {"hidden": true} -->
+Your answer here:
+
+<!-- #endregion -->
+
+<!-- #region {"hidden": true} -->
+### Results 
+<!-- #endregion -->
+
+<!-- #region {"hidden": true} -->
+**Include cells here to show the results, which could be either a calculation or a visualization.** 
+<!-- #endregion -->
+
+# Discussion
+
+<!-- #region {"heading_collapsed": true} -->
 ## Summary
 <!-- #endregion -->
 
@@ -207,7 +193,7 @@ Your answer here:
 Your answer here:
 <!-- #endregion -->
 
-<!-- #region {"code_folding": [], "heading_collapsed": true, "hidden": true} -->
+<!-- #region {"code_folding": [], "heading_collapsed": true} -->
 ## Considerations
 <!-- #endregion -->
 
@@ -227,7 +213,7 @@ Your answer here:
 Your answer here:
 <!-- #endregion -->
 
-<!-- #region {"heading_collapsed": true, "hidden": true} -->
+<!-- #region {"heading_collapsed": true} -->
 ## Next Steps
 <!-- #endregion -->
 
