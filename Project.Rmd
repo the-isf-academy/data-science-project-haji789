@@ -35,50 +35,59 @@ jupyter:
 [EDIT ME]
 <!-- #endregion -->
 
+<!-- #region {"heading_collapsed": true} -->
 # Data
+<!-- #endregion -->
 
-```{python}
+```{python hidden=TRUE}
 #Include any import statements you will need
 import pandas as pd
 import matplotlib.pyplot as plt
 ```
 
-```{python}
+```{python hidden=TRUE}
 df1 = pd.read_csv('ISF HVAC Hourly Data.csv')
 df2 = pd.read_csv('ISF Lighting Hourly Data.csv')
 df3 = pd.read_csv('table33(1).csv')
 ```
 
-```{python}
+```{python hidden=TRUE}
 df1.describe()
 ```
 
-```{python}
+```{python hidden=TRUE}
 df2.describe()
 ```
 
-```{python}
+```{python hidden=TRUE}
 df3.describe()
 ```
 
+<!-- #region {"hidden": true} -->
 **What is this data about?**
+<!-- #endregion -->
 
-
+<!-- #region {"hidden": true} -->
 In general, the data that I have chosen mainly explains the amount of energy in kilowatts that are used on multiple systems of both our school and other schools around Hong Kong over different amounts of time. The columns that I would like to work with for the google sheets data set would be the rows that included all of the buildings of the school campus, as some rows of A and C block were not available yet due to the building not being built yet. On the other hand, I would like to monitor the HVAC and lighting systems through the GHUB website, as I believe that this will help me answer my overarching question. Finally, the columns that I would like to use from the government data set would be the HVAC and lighting statistics for the schools around Hong Kong.
+<!-- #endregion -->
 
-
+<!-- #region {"hidden": true} -->
 **Where is this data from?**
+<!-- #endregion -->
 
-
+<!-- #region {"hidden": true} -->
 The ISF Environment Data Set was created by our school’s Shuyuan Sustainability Team, being collected through sensors that are placed all around our school to track the amount of energy that is used in heaters, air conditioners and lights in each of the buildings in our school, the data was then programmed to run through some code that would place the data that was collected into a google sheets document, having data being collected from August 1st 2018 till July 31st 2019. There is also a website called GHUB that allows our teachers to monitor the amount of kilowatts that are used in the HVAC and lighting systems of our school, being able to be accessed at any time any where(as long as the user has an internet connection). Finally, I will also be using a dataset that was made by the government that educates viewers about the amount of energy that is used on the energy systems across Hong Kong schools, giving me a good comparison.
+<!-- #endregion -->
 
-
+<!-- #region {"heading_collapsed": true} -->
 # Subquestions
+<!-- #endregion -->
 
-
+<!-- #region {"hidden": true} -->
 **What quantitative subquestions will you investigate?** 
+<!-- #endregion -->
 
-
+<!-- #region {"hidden": true} -->
 1. Which block(A Block, B Block, C Block, etc.) in our school uses the most energy on extra energy consumers?
 
 2. What are the most common solutions that are used by our school to decrease the use of energy?
@@ -86,7 +95,7 @@ The ISF Environment Data Set was created by our school’s Shuyuan Sustainabilit
 3. Which extra energy consumer( air conditioners, heaters, lights) uses the most energy in our school?
 
 4. What are the differences between schools energy use on extra energy consumers when compared to the government statistics on Hong Kong’s educational systems?
-
+<!-- #endregion -->
 
 # Methods and Results
 
@@ -94,11 +103,9 @@ The ISF Environment Data Set was created by our school’s Shuyuan Sustainabilit
 #Import any helper files you need here
 ```
 
-<!-- #region {"heading_collapsed": true} -->
 ## Which block(A Block, B Block, C Block, etc.) in our school uses the most energy on extra energy consumers?
-<!-- #endregion -->
 
-<!-- #region {"heading_collapsed": true, "hidden": true} -->
+<!-- #region {"heading_collapsed": true} -->
 ### Methods
 <!-- #endregion -->
 
@@ -114,21 +121,17 @@ I will approach this question by comparing the five buildings/blocks with the am
 I will be using the ISF environment data sets as it shows the amount of energy that are used on lighting and HVAC across all five of the buildings(Blocks from both the Primary and also Secondary sections of our school). I will then take the data that I have found from the dataset and express it through a bar graph, different colors or labels will be used to show the differences between each building.
 <!-- #endregion -->
 
-<!-- #region {"hidden": true} -->
 ### Results 
-<!-- #endregion -->
 
-<!-- #region {"hidden": true} -->
-**Include cells here to show the results, which could be either a calculation or a visualization.** 
-<!-- #endregion -->
+```{python}
 
-<!-- #region {"hidden": true} -->
-Your answer here: 
-<!-- #endregion -->
-
-## Which extra energy consumer( air conditioners, heaters, lights) uses the most energy in our school?
+```
 
 <!-- #region {"heading_collapsed": true} -->
+## Which extra energy consumer( air conditioners, heaters, lights) uses the most energy in our school?
+<!-- #endregion -->
+
+<!-- #region {"heading_collapsed": true, "hidden": true} -->
 ### Methods
 <!-- #endregion -->
 
@@ -144,27 +147,28 @@ I will approach this question by comparing the total amount of energy used on th
 I will be using ISF enviroment datasets as I will be able to find the amount of energy that are used un the lighting and the HVAC systems all across the school. I will then use a bar graph to display the data that has been processed by past code("Average Code" used at this time), as I believe that by doing this it will allow the people who will be looking at my graphs to understand what I am trying to communicate.
 <!-- #endregion -->
 
+<!-- #region {"heading_collapsed": true, "hidden": true} -->
 ### Results 
+<!-- #endregion -->
 
-
-**Include cells here to show the results, which could be either a calculation or a visualization.** 
-
-```{python}
+```{python hidden=TRUE}
 df1dataframe = df1.describe()
 df1dataframe.loc["mean"]
 (37.542133+43.576555+177.678781+32.276606+24.712070)/5
 ```
 
-```{python}
+```{python hidden=TRUE}
 df2dataframe = df2.describe()
 df2dataframe.loc["mean"]
 (5.912801+4.550033+3.093487+4.118974+2.488569)/5
 ```
 
+<!-- #region {"heading_collapsed": true} -->
 ## What are the differences between schools energy use on extra energy consumers when compared to the government statistics on Hong Kong’s educational systems?
 
+<!-- #endregion -->
 
-<!-- #region {"heading_collapsed": true} -->
+<!-- #region {"heading_collapsed": true, "hidden": true} -->
 ### Methods
 <!-- #endregion -->
 
@@ -180,17 +184,36 @@ I will approach this question by comparing the amount of energy that is used on 
 I will be using ISF enviroment datasets and the government statistics dataset, as I will be able to use the data from both datasets to look at the amount of energy on lighting and HVAC across our school and also Hong Kong educational systems.. I will then use a bar graph to display the data that has been processed by past code("Average Code" used at this time), as I believe that by doing this it will allow the people who will be looking at my graphs to understand what I am trying to tell them.
 <!-- #endregion -->
 
+<!-- #region {"heading_collapsed": true, "hidden": true} -->
 ### Results 
+<!-- #endregion -->
 
-
-**Include cells here to show the results, which could be either a calculation or a visualization.** 
-
-```{python}
+```{python hidden=TRUE}
 df3
 ```
 
-```{python}
+```{python hidden=TRUE}
+((((1602+1563+1603+1606+1613+1641+671+661+661+666+681+688)/12)/365)/24)/1107
+```
 
+```{python hidden=TRUE}
+0.00011735201065861494*277796.689
+```
+
+```{python hidden=TRUE}
+df1dataframe = df1.describe()
+df1dataframe.loc["mean"]
+(37.542133+43.576555+177.678781+32.276606+24.712070)/5
+```
+
+```{python hidden=TRUE}
+df2dataframe = df2.describe()
+df2dataframe.loc["mean"]
+(5.912801+4.550033+3.093487+4.118974+2.488569)/5
+```
+
+```{python hidden=TRUE}
+(37.542133+43.576555+177.678781+32.276606+24.712070+5.912801+4.550033+3.093487+4.118974+2.488569)/10
 ```
 
 <!-- #region {"heading_collapsed": true} -->
