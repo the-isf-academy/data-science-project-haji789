@@ -12,82 +12,72 @@ jupyter:
     name: python3
 ---
 
-<!-- #region {"heading_collapsed": true} -->
-# Introduction
-<!-- #endregion -->
+```{python}
 
-<!-- #region {"hidden": true} -->
+```
+
+# Introduction
+
+
 <img src="INSERTLINK">
 
 [Caption](INSERTLINK)
-<!-- #endregion -->
 
-<!-- #region {"hidden": true} -->
+
 ## Overarching Question: How much of our school’s energy is used on extra energy consumers(mainly explore air conditioners, heaters, lights)?
 
-<!-- #endregion -->
 
-<!-- #region {"hidden": true} -->
+
 **Why this question?** 
-<!-- #endregion -->
 
-<!-- #region {"hidden": true} -->
+
 [EDIT ME]
-<!-- #endregion -->
 
-<!-- #region {"heading_collapsed": true} -->
+
 # Data
-<!-- #endregion -->
 
-```{python hidden=TRUE}
+```{python}
 #Include any import statements you will need
 import pandas as pd
 import matplotlib.pyplot as plt
 ```
 
-```{python hidden=TRUE}
+```{python}
 df1 = pd.read_csv('ISF HVAC Hourly Data.csv')
 df2 = pd.read_csv('ISF Lighting Hourly Data.csv')
 df3 = pd.read_csv('table33(1).csv')
 ```
 
-```{python hidden=TRUE}
+```{python}
 df1.describe()
 ```
 
-```{python hidden=TRUE}
+```{python}
 df2.describe()
 ```
 
-```{python hidden=TRUE}
+```{python}
 df3.describe()
 ```
 
-<!-- #region {"hidden": true} -->
 **What is this data about?**
-<!-- #endregion -->
 
-<!-- #region {"hidden": true} -->
+
 In general, the data that I have chosen mainly explains the amount of energy in kilowatts that are used on multiple systems of both our school and other schools around Hong Kong over different amounts of time. The columns that I would like to work with for the google sheets data set would be the rows that included all of the buildings of the school campus, as some rows of A and C block were not available yet due to the building not being built yet. On the other hand, I would like to monitor the HVAC and lighting systems through the GHUB website, as I believe that this will help me answer my overarching question. Finally, the columns that I would like to use from the government data set would be the HVAC and lighting statistics for the schools around Hong Kong.
-<!-- #endregion -->
 
-<!-- #region {"hidden": true} -->
+
 **Where is this data from?**
-<!-- #endregion -->
 
-<!-- #region {"hidden": true} -->
+
 The ISF Environment Data Set was created by our school’s Shuyuan Sustainability Team, being collected through sensors that are placed all around our school to track the amount of energy that is used in heaters, air conditioners and lights in each of the buildings in our school, the data was then programmed to run through some code that would place the data that was collected into a google sheets document, having data being collected from August 1st 2018 till July 31st 2019. There is also a website called GHUB that allows our teachers to monitor the amount of kilowatts that are used in the HVAC and lighting systems of our school, being able to be accessed at any time any where(as long as the user has an internet connection). Finally, I will also be using a dataset that was made by the government that educates viewers about the amount of energy that is used on the energy systems across Hong Kong schools, giving me a good comparison.
-<!-- #endregion -->
 
-<!-- #region {"heading_collapsed": true} -->
+
 # Subquestions
-<!-- #endregion -->
 
-<!-- #region {"hidden": true} -->
+
 **What quantitative subquestions will you investigate?** 
-<!-- #endregion -->
 
-<!-- #region {"hidden": true} -->
+
 1. Which block(A Block, B Block, C Block, etc.) in our school uses the most energy on extra energy consumers?
 
 2. What are the most common solutions that are used by our school to decrease the use of energy?
@@ -95,7 +85,7 @@ The ISF Environment Data Set was created by our school’s Shuyuan Sustainabilit
 3. Which extra energy consumer( air conditioners, heaters, lights) uses the most energy in our school?
 
 4. What are the differences between schools energy use on extra energy consumers when compared to the government statistics on Hong Kong’s educational systems?
-<!-- #endregion -->
+
 
 # Methods and Results
 
@@ -105,33 +95,68 @@ The ISF Environment Data Set was created by our school’s Shuyuan Sustainabilit
 
 ## Which block(A Block, B Block, C Block, etc.) in our school uses the most energy on extra energy consumers?
 
-<!-- #region {"heading_collapsed": true} -->
-### Methods
-<!-- #endregion -->
 
-<!-- #region {"hidden": true} -->
+### Methods
+
+
 **How will you approach this question? What data science tools/functions will you use, and why?**
 
 I will approach this question by comparing the five buildings/blocks with the amount of energy that is used for each one on their extra energy consumers. Code used in past classes will be used ot find the average amount of energy used in each block, which will then be displayed in a bar graph by using code that had been written by us in the past.
-<!-- #endregion -->
 
-<!-- #region {"hidden": true} -->
+
 **Which data will you use, and how will you reorganize / store this data?**
 
 I will be using the ISF environment data sets as it shows the amount of energy that are used on lighting and HVAC across all five of the buildings(Blocks from both the Primary and also Secondary sections of our school). I will then take the data that I have found from the dataset and express it through a bar graph, different colors or labels will be used to show the differences between each building.
-<!-- #endregion -->
+
 
 ### Results 
 
 ```{python}
-
+df1dataframe = df1.describe()
+df1dataframe.loc["mean"]
 ```
 
-<!-- #region {"heading_collapsed": true} -->
-## Which extra energy consumer( air conditioners, heaters, lights) uses the most energy in our school?
-<!-- #endregion -->
+```{python}
+df2dataframe = df2.describe()
+df2dataframe.loc["mean"]
+```
 
-<!-- #region {"heading_collapsed": true, "hidden": true} -->
+```{python}
+(37.542133+5.912801)/2
+```
+
+```{python}
+(43.576555+4.550033)/2
+```
+
+```{python}
+(177.678781+3.093487)/2
+```
+
+```{python}
+(32.276606+4.118974)/2
+```
+
+```{python}
+(24.712070+2.488569)/2
+```
+
+```{python}
+objects = ("Block A", 'Block B', 'Block C', 'Block G', 'Block YG')
+y_pos = np.arange(len(objects))
+performance = [21.727467, 24.063294, 90.386134, 18.19779, 13.600319500000001]
+
+plt.bar(y_pos, performance, align='center', alpha=0.5)
+plt.xticks(y_pos, objects)
+plt.ylabel('Amount of ____')
+plt.title('Which Block in Our School Uses the Most Energy on Extra Energy Consumers?')
+
+plt.show()
+```
+
+## Which extra energy consumer( air conditioners, heaters, lights) uses the most energy in our school?
+
+<!-- #region {"heading_collapsed": true} -->
 ### Methods
 <!-- #endregion -->
 
@@ -147,17 +172,15 @@ I will approach this question by comparing the total amount of energy used on th
 I will be using ISF enviroment datasets as I will be able to find the amount of energy that are used un the lighting and the HVAC systems all across the school. I will then use a bar graph to display the data that has been processed by past code("Average Code" used at this time), as I believe that by doing this it will allow the people who will be looking at my graphs to understand what I am trying to communicate.
 <!-- #endregion -->
 
-<!-- #region {"heading_collapsed": true, "hidden": true} -->
 ### Results 
-<!-- #endregion -->
 
-```{python hidden=TRUE}
+```{python}
 df1dataframe = df1.describe()
 df1dataframe.loc["mean"]
 (37.542133+43.576555+177.678781+32.276606+24.712070)/5
 ```
 
-```{python hidden=TRUE}
+```{python}
 df2dataframe = df2.describe()
 df2dataframe.loc["mean"]
 (5.912801+4.550033+3.093487+4.118974+2.488569)/5
@@ -216,27 +239,22 @@ df2dataframe.loc["mean"]
 (37.542133+43.576555+177.678781+32.276606+24.712070+5.912801+4.550033+3.093487+4.118974+2.488569)/10
 ```
 
-<!-- #region {"heading_collapsed": true} -->
 ## What are the most common solutions that are used by our school to decrease the use of energy?
-<!-- #endregion -->
 
-<!-- #region {"heading_collapsed": true, "hidden": true} -->
+
 ### Methods
-<!-- #endregion -->
 
-<!-- #region {"hidden": true} -->
+
 **How will you approach this question? What data science tools/functions will you use, and why?**
 
 I will approach this question by comparing the most common solutions(solutions will be chosen by our Shuyuan Sustainability Team) that are used by our school to decrease the use of energy. Code to change the color of the data sets will be used so that the differences can be seen clearly and code to find averages between values will also be used.
-<!-- #endregion -->
 
-<!-- #region {"hidden": true} -->
+
 **Which data will you use, and how will you reorganize / store this data?**
 
 I will be using a dataset that was created by asking the Shuyuan Sustainability team what the most common solutions are to decrease the use of energy, a selection of solutions will be given to them to select from and each person will be able to choose which one is most important in their own opinion. I will then use a bar graph to display the data that has been processed by past code("Average Code" used at this time), as I believe that by doing this it will allow the people who will be looking at my graphs to understand what I am trying to tell them.
-<!-- #endregion -->
 
-<!-- #region {"heading_collapsed": true, "hidden": true} -->
+<!-- #region {"heading_collapsed": true} -->
 ### Results 
 <!-- #endregion -->
 
