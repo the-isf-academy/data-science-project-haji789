@@ -12,10 +12,6 @@ jupyter:
     name: python3
 ---
 
-```{python}
-
-```
-
 # Introduction
 
 
@@ -84,7 +80,7 @@ The ISF Environment Data Set was created by our school’s Shuyuan Sustainabilit
 
 3. Which extra energy consumer( air conditioners, heaters, lights) uses the most energy in our school?
 
-4. What are the differences between schools energy use on extra energy consumers when compared to the government statistics on Hong Kong’s educational systems?
+4. What are the differences in energy use in primary(G, YG) and secondary blocks(A, B) from extra energy consumers?
 
 
 # Methods and Results
@@ -106,14 +102,22 @@ I will approach this question by comparing the five buildings/blocks with the am
 
 **Which data will you use, and how will you reorganize / store this data?**
 
-I will be using the ISF environment data sets as it shows the amount of energy that are used on lighting and HVAC across all five of the buildings(Blocks from both the Primary and also Secondary sections of our school). I will then take the data that I have found from the dataset and express it through a bar graph, different colors or labels will be used to show the differences between each building.
+I will be using the ISF environment data sets as it shows the amount of energy that are used on lighting and HVAC across all five of the buildings(Blocks from both the Primary and also Secondary sections of our school). I will then take the processed data(using "Average Amount" code) that I have found from the dataset and express it through a bar graph, different labels will be used to show the differences between each building.
 
 
 ### Results 
 
 ```{python}
+##Display of the mean of the ISF HVAC systems.
+```
+
+```{python}
 df1dataframe = df1.describe()
 df1dataframe.loc["mean"]
+```
+
+```{python}
+##Display of the mean of the ISF lighting systems.
 ```
 
 ```{python}
@@ -122,7 +126,15 @@ df2dataframe.loc["mean"]
 ```
 
 ```{python}
+##Average energy use in HVAC and lighting systems in Building A.
+```
+
+```{python}
 (37.542133+5.912801)/2
+```
+
+```{python}
+##Average energy use in HVAC and lighting systems in Building B.
 ```
 
 ```{python}
@@ -130,7 +142,15 @@ df2dataframe.loc["mean"]
 ```
 
 ```{python}
+##Average energy use in HVAC and lighting systems in Building C.
+```
+
+```{python}
 (177.678781+3.093487)/2
+```
+
+```{python}
+##Average energy use in HVAC and lighting systems in Building G.
 ```
 
 ```{python}
@@ -138,7 +158,15 @@ df2dataframe.loc["mean"]
 ```
 
 ```{python}
+##Average energy use in HVAC and lighting systems in Building YG.
+```
+
+```{python}
 (24.712070+2.488569)/2
+```
+
+```{python}
+##Code for the bar graph.
 ```
 
 ```{python}
@@ -148,7 +176,7 @@ performance = [21.727467, 24.063294, 90.386134, 18.19779, 13.600319500000001]
 
 plt.bar(y_pos, performance, align='center', alpha=0.5)
 plt.xticks(y_pos, objects)
-plt.ylabel('Amount of ____')
+plt.ylabel('Energy Produced(Kilowatts per hour)')
 plt.title('Which Block in Our School Uses the Most Energy on Extra Energy Consumers?')
 
 plt.show()
@@ -156,23 +184,25 @@ plt.show()
 
 ## Which extra energy consumer( air conditioners, heaters, lights) uses the most energy in our school?
 
-<!-- #region {"heading_collapsed": true} -->
-### Methods
-<!-- #endregion -->
 
-<!-- #region {"hidden": true} -->
+### Methods
+
+
 **How will you approach this question? What data science tools/functions will you use, and why?**
 
-I will approach this question by comparing the total amount of energy used on the lighting of our school compared to the HVAC(Heaters and air conditioners). The "Average Amount" code that was written in past classes will be used to figure out the average use of energy for each system, the data will then be shown in a bar graph by using code from past labs.
-<!-- #endregion -->
+I will approach this question by comparing the total amount of energy used on the lighting of our school compared to the HVAC(Heaters and air conditioners). The "Average Amount" code that was written in past classes will be used to figure out the average use of energy for each system, the data will then be shown as it is through using the code above, it will also be labeled to show differences.
 
-<!-- #region {"hidden": true} -->
+
 **Which data will you use, and how will you reorganize / store this data?**
 
-I will be using ISF enviroment datasets as I will be able to find the amount of energy that are used un the lighting and the HVAC systems all across the school. I will then use a bar graph to display the data that has been processed by past code("Average Code" used at this time), as I believe that by doing this it will allow the people who will be looking at my graphs to understand what I am trying to communicate.
-<!-- #endregion -->
+I will be using ISF enviroment datasets as I will be able to find the amount of energy that are used un the lighting and the HVAC systems all across the school. I will then use the average code to display everything(note that everything will be labeled, as I believe that by doing this it will allow the people who will be looking at my results to understand what I am trying to communicate.
+
 
 ### Results 
+
+```{python}
+##Code for the mean of the HVAC systems of our school.
+```
 
 ```{python}
 df1dataframe = df1.describe()
@@ -181,65 +211,83 @@ df1dataframe.loc["mean"]
 ```
 
 ```{python}
+##Code for the mean of the lightings systems of our school.
+```
+
+```{python}
 df2dataframe = df2.describe()
 df2dataframe.loc["mean"]
 (5.912801+4.550033+3.093487+4.118974+2.488569)/5
 ```
 
-<!-- #region {"heading_collapsed": true} -->
 ## What are the differences between schools energy use on extra energy consumers when compared to the government statistics on Hong Kong’s educational systems?
 
-<!-- #endregion -->
 
-<!-- #region {"heading_collapsed": true, "hidden": true} -->
+
 ### Methods
-<!-- #endregion -->
 
-<!-- #region {"hidden": true} -->
+
 **How will you approach this question? What data science tools/functions will you use, and why?**
 
-I will approach this question by comparing the amount of energy that is used on our school when compared to the data that is given to us by the government on how much energy Hong Kong's educational system uses on average. Code to change the color of the data sets will be used so that the differences can be seen clearly and code to find averages between values will also be used.
-<!-- #endregion -->
+I will approach this question by comparing the amount of energy that is used on our school when compared to the data that is given to us by the government on how much energy Hong Kong's educational system uses on average. The "Average Amount" code that was written in past classes will be used to figure out the average use of energy for each system, the data will then be shown as it is through using the code above, it will also be labeled to show differences.
 
-<!-- #region {"hidden": true} -->
+
 **Which data will you use, and how will you reorganize / store this data?**
 
-I will be using ISF enviroment datasets and the government statistics dataset, as I will be able to use the data from both datasets to look at the amount of energy on lighting and HVAC across our school and also Hong Kong educational systems.. I will then use a bar graph to display the data that has been processed by past code("Average Code" used at this time), as I believe that by doing this it will allow the people who will be looking at my graphs to understand what I am trying to tell them.
-<!-- #endregion -->
+I will be using ISF enviroment datasets and the government statistics dataset, as I will be able to use the data from both datasets to look at the amount of energy on lighting and HVAC across our school and also Hong Kong educational systems.. I will then use the average amount code to process all of the data which will then be labeled to show the differences, as I believe that by doing this it will allow the people who will be looking at my results to understand what I am trying to tell them.
 
-<!-- #region {"heading_collapsed": true, "hidden": true} -->
+
 ### Results 
-<!-- #endregion -->
 
-```{python hidden=TRUE}
+```{python}
 df3
 ```
 
-```{python hidden=TRUE}
+```{python}
+##Code for calculating the average amount of energy used in government statistics.
+```
+
+```{python}
 ((((1602+1563+1603+1606+1613+1641+671+661+661+666+681+688)/12)/365)/24)/1107
 ```
 
-```{python hidden=TRUE}
+```{python}
+##Code for converting terajoules to kilowatts per hour.
+```
+
+```{python}
 0.00011735201065861494*277796.689
 ```
 
-```{python hidden=TRUE}
+```{python}
+##Code for the mean of the HVAC systems of our school.
+```
+
+```{python}
 df1dataframe = df1.describe()
 df1dataframe.loc["mean"]
 (37.542133+43.576555+177.678781+32.276606+24.712070)/5
 ```
 
-```{python hidden=TRUE}
+```{python}
+##Code for the mean of the lighting systems of our school.
+```
+
+```{python}
 df2dataframe = df2.describe()
 df2dataframe.loc["mean"]
 (5.912801+4.550033+3.093487+4.118974+2.488569)/5
 ```
 
-```{python hidden=TRUE}
+```{python}
+##Code for the mean of both the HVAC and lighting systems of our school.
+```
+
+```{python}
 (37.542133+43.576555+177.678781+32.276606+24.712070+5.912801+4.550033+3.093487+4.118974+2.488569)/10
 ```
 
-## What are the most common solutions that are used by our school to decrease the use of energy?
+## What are the differences in energy use in primary(G, YG) and secondary blocks(A, B) from extra energy consumers?
 
 
 ### Methods
@@ -247,26 +295,73 @@ df2dataframe.loc["mean"]
 
 **How will you approach this question? What data science tools/functions will you use, and why?**
 
-I will approach this question by comparing the most common solutions(solutions will be chosen by our Shuyuan Sustainability Team) that are used by our school to decrease the use of energy. Code to change the color of the data sets will be used so that the differences can be seen clearly and code to find averages between values will also be used.
+I will approach this question by comparing the amount of energy that is used on in the primary blocks of G and YG with the energy use in the secondary block of A and B. Code used in past classes will be used ot find the average amount of energy used in each block, which will then be displayed in a bar graph by using code that had been written by us in the past.
 
 
 **Which data will you use, and how will you reorganize / store this data?**
 
-I will be using a dataset that was created by asking the Shuyuan Sustainability team what the most common solutions are to decrease the use of energy, a selection of solutions will be given to them to select from and each person will be able to choose which one is most important in their own opinion. I will then use a bar graph to display the data that has been processed by past code("Average Code" used at this time), as I believe that by doing this it will allow the people who will be looking at my graphs to understand what I am trying to tell them.
+I will be using the ISF environment data sets as it shows the amount of energy that are used on lighting and HVAC across all of the primary and secondary buildings(A, B, G, YG). I will then take the data that I have found from the datasets and express it through finding average code between all of the data. Afterwards, I will take the values and finally place it into a bar graph, so that my audience can understand what I am trying to communicate.
 
-<!-- #region {"heading_collapsed": true} -->
+
 ### Results 
-<!-- #endregion -->
 
-<!-- #region {"hidden": true} -->
-**Include cells here to show the results, which could be either a calculation or a visualization.** 
-<!-- #endregion -->
+
+
+
+```{python}
+##Code for the mean of the HVAC systems of our school.
+```
+
+```{python}
+df1dataframe = df1.describe()
+df1dataframe.loc["mean"]
+```
+
+```{python}
+##Code for the mean of the lighting systems of our school.
+```
+
+```{python}
+df2dataframe = df2.describe()
+df2dataframe.loc["mean"]
+```
+
+```{python}
+##Code for average energy use of Primary Blocks.
+```
+
+```{python}
+(32.276606+24.712070+4.118974+2.488569)/4
+```
+
+```{python}
+##Code for average energy use of Secondary Blocks.
+```
+
+```{python}
+(37.542133+43.576555+5.912801+4.550033)/4
+```
+
+```{python}
+##Code for the bar graph.
+```
+
+```{python}
+objects = ("Primary Blocks(Y, YG)", 'Secondary Blocks(A, B)')
+y_pos = np.arange(len(objects))
+performance = [15.89905475, 22.895380499999998]
+
+plt.bar(y_pos, performance, align='center', alpha=0.5)
+plt.xticks(y_pos, objects)
+plt.ylabel('Energy Produced(Kilowatts per hour)')
+plt.title('What are the differences in energy use in primary(G, YG) and secondary blocks(A, B) from extra energy consumers?')
+
+plt.show()
+```
+
+# Discussion
 
 <!-- #region {"heading_collapsed": true} -->
-# Discussion
-<!-- #endregion -->
-
-<!-- #region {"heading_collapsed": true, "hidden": true} -->
 ## Summary
 <!-- #endregion -->
 
@@ -286,7 +381,7 @@ Your answer here:
 Your answer here:
 <!-- #endregion -->
 
-<!-- #region {"code_folding": [], "heading_collapsed": true, "hidden": true} -->
+<!-- #region {"code_folding": [], "heading_collapsed": true} -->
 ## Considerations
 <!-- #endregion -->
 
@@ -306,7 +401,7 @@ Your answer here:
 Your answer here:
 <!-- #endregion -->
 
-<!-- #region {"heading_collapsed": true, "hidden": true} -->
+<!-- #region {"heading_collapsed": true} -->
 ## Next Steps
 <!-- #endregion -->
 
