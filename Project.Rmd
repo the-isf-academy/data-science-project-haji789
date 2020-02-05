@@ -41,7 +41,7 @@ import matplotlib.pyplot as plt
 ```{python}
 df1 = pd.read_csv('ISF HVAC Hourly Data.csv')
 df2 = pd.read_csv('ISF Lighting Hourly Data.csv')
-df3 = pd.read_csv('table33(1).csv')
+df3 = pd.read_csv('table33_1_.csv')
 ```
 
 ```{python}
@@ -113,7 +113,12 @@ I will be using the ISF environment data sets as it shows the amount of energy t
 
 ```{python}
 df1dataframe = df1.describe()
-df1dataframe.loc["mean"]
+HVAC_Building_A = df1dataframe.loc["mean"]['Building A']
+HVAC_Building_B = df1dataframe.loc["mean"]['Building B']
+HVAC_Building_C = df1dataframe.loc["mean"]['Building C']
+HVAC_Building_G = df1dataframe.loc["mean"]['Building G']
+HVAC_Building_R = df1dataframe.loc["mean"]['Building R']
+HVAC_Building_YG = df1dataframe.loc["mean"]['Building YG']
 ```
 
 ```{python}
@@ -122,7 +127,11 @@ df1dataframe.loc["mean"]
 
 ```{python}
 df2dataframe = df2.describe()
-df2dataframe.loc["mean"]
+L_Building_A = df2dataframe.loc["mean"]['Building A']
+L_Building_B = df2dataframe.loc["mean"]['Building B']
+L_Building_C = df2dataframe.loc["mean"]['Building C']
+L_Building_G = df2dataframe.loc["mean"]['Building G']
+L_Building_YG = df2dataframe.loc["mean"]['Building YG']
 ```
 
 ```{python}
@@ -130,7 +139,7 @@ df2dataframe.loc["mean"]
 ```
 
 ```{python}
-(37.542133+5.912801)/2
+Four_One_A = (HVAC_Building_A+L_Building_A)/2
 ```
 
 ```{python}
@@ -138,7 +147,7 @@ df2dataframe.loc["mean"]
 ```
 
 ```{python}
-(43.576555+4.550033)/2
+Four_One_B = (HVAC_Building_B+L_Building_B)/2
 ```
 
 ```{python}
@@ -146,7 +155,7 @@ df2dataframe.loc["mean"]
 ```
 
 ```{python}
-(177.678781+3.093487)/2
+Four_One_C = (HVAC_Building_C+L_Building_C)/2
 ```
 
 ```{python}
@@ -154,7 +163,7 @@ df2dataframe.loc["mean"]
 ```
 
 ```{python}
-(32.276606+4.118974)/2
+Four_One_G = (HVAC_Building_G+L_Building_G)/2
 ```
 
 ```{python}
@@ -162,7 +171,7 @@ df2dataframe.loc["mean"]
 ```
 
 ```{python}
-(24.712070+2.488569)/2
+Four_One_YG = (HVAC_Building_YG+L_Building_YG)/2 
 ```
 
 ```{python}
@@ -172,7 +181,7 @@ df2dataframe.loc["mean"]
 ```{python}
 objects = ("Block A", 'Block B', 'Block C', 'Block G', 'Block YG')
 y_pos = np.arange(len(objects))
-performance = [21.727467, 24.063294, 90.386134, 18.19779, 13.600319500000001]
+performance = [Four_One_A, Four_One_B, Four_One_C, Four_One_G, Four_One_YG]
 
 plt.bar(y_pos, performance, align='center', alpha=0.5)
 plt.xticks(y_pos, objects)
@@ -206,8 +215,13 @@ I will be using ISF enviroment datasets as I will be able to find the amount of 
 
 ```{python}
 df1dataframe = df1.describe()
-df1dataframe.loc["mean"]
-(37.542133+43.576555+177.678781+32.276606+24.712070)/5
+HVAC_Building_A = df1dataframe.loc["mean"]['Building A']
+HVAC_Building_B = df1dataframe.loc["mean"]['Building B']
+HVAC_Building_C = df1dataframe.loc["mean"]['Building C']
+HVAC_Building_G = df1dataframe.loc["mean"]['Building G']
+HVAC_Building_R = df1dataframe.loc["mean"]['Building R']
+HVAC_Building_YG = df1dataframe.loc["mean"]['Building YG']
+(HVAC_Building_A+HVAC_Building_B+HVAC_Building_C+HVAC_Building_G+HVAC_Building_YG)/5
 ```
 
 ```{python}
@@ -216,8 +230,12 @@ df1dataframe.loc["mean"]
 
 ```{python}
 df2dataframe = df2.describe()
-df2dataframe.loc["mean"]
-(5.912801+4.550033+3.093487+4.118974+2.488569)/5
+L_Building_A = df2dataframe.loc["mean"]['Building A']
+L_Building_B = df2dataframe.loc["mean"]['Building B']
+L_Building_C = df2dataframe.loc["mean"]['Building C']
+L_Building_G = df2dataframe.loc["mean"]['Building G']
+L_Building_YG = df2dataframe.loc["mean"]['Building YG']
+(L_Building_A+L_Building_B+L_Building_C+L_Building_G+L_Building_YG)/5
 ```
 
 ## What are the differences between schools energy use on extra energy consumers when compared to the government statistics on Hong Kong’s educational systems?
@@ -248,7 +266,13 @@ df3
 ```
 
 ```{python}
-((((1602+1563+1603+1606+1613+1641+671+661+661+666+681+688)/12)/365)/24)/1107
+df3dataframe = df3.describe()
+HVAC_Gov = df3dataframe.loc["mean"]['Air Conditioning (Unit : Terajoule)']
+L_Gov = df3dataframe.loc["mean"]['Lighting ']
+```
+
+```{python}
+Average_Gov = (((HVAC_Gov+L_Gov/2)/365)/24)/1107
 ```
 
 ```{python}
@@ -256,7 +280,7 @@ df3
 ```
 
 ```{python}
-0.00011735201065861494*277796.689
+Average_Gov*277796.689
 ```
 
 ```{python}
@@ -265,8 +289,13 @@ df3
 
 ```{python}
 df1dataframe = df1.describe()
-df1dataframe.loc["mean"]
-(37.542133+43.576555+177.678781+32.276606+24.712070)/5
+HVAC_Building_A = df1dataframe.loc["mean"]['Building A']
+HVAC_Building_B = df1dataframe.loc["mean"]['Building B']
+HVAC_Building_C = df1dataframe.loc["mean"]['Building C']
+HVAC_Building_G = df1dataframe.loc["mean"]['Building G']
+HVAC_Building_R = df1dataframe.loc["mean"]['Building R']
+HVAC_Building_YG = df1dataframe.loc["mean"]['Building YG']
+Average_HVAC = (HVAC_Building_A+HVAC_Building_C+HVAC_Building_B+HVAC_Building_G+HVAC_Building_YG)/5
 ```
 
 ```{python}
@@ -275,8 +304,12 @@ df1dataframe.loc["mean"]
 
 ```{python}
 df2dataframe = df2.describe()
-df2dataframe.loc["mean"]
-(5.912801+4.550033+3.093487+4.118974+2.488569)/5
+L_Building_A = df2dataframe.loc["mean"]['Building A']
+L_Building_B = df2dataframe.loc["mean"]['Building B']
+L_Building_C = df2dataframe.loc["mean"]['Building C']
+L_Building_G = df2dataframe.loc["mean"]['Building G']
+L_Building_YG = df2dataframe.loc["mean"]['Building YG']
+Average_L = (L_Building_A+L_Building_B+L_Building_C+L_Building_G+L_Building_YG)/5
 ```
 
 ```{python}
@@ -284,7 +317,7 @@ df2dataframe.loc["mean"]
 ```
 
 ```{python}
-(37.542133+43.576555+177.678781+32.276606+24.712070+5.912801+4.550033+3.093487+4.118974+2.488569)/10
+(Average_L+Average_HVAC)/2
 ```
 
 ## What are the differences in energy use in primary(G, YG) and secondary blocks(A, B) from extra energy consumers?
@@ -314,7 +347,12 @@ I will be using the ISF environment data sets as it shows the amount of energy t
 
 ```{python}
 df1dataframe = df1.describe()
-df1dataframe.loc["mean"]
+HVAC_Building_A = df1dataframe.loc["mean"]['Building A']
+HVAC_Building_B = df1dataframe.loc["mean"]['Building B']
+HVAC_Building_C = df1dataframe.loc["mean"]['Building C']
+HVAC_Building_G = df1dataframe.loc["mean"]['Building G']
+HVAC_Building_R = df1dataframe.loc["mean"]['Building R']
+HVAC_Building_YG = df1dataframe.loc["mean"]['Building YG']
 ```
 
 ```{python}
@@ -323,7 +361,11 @@ df1dataframe.loc["mean"]
 
 ```{python}
 df2dataframe = df2.describe()
-df2dataframe.loc["mean"]
+L_Building_A = df2dataframe.loc["mean"]['Building A']
+L_Building_B = df2dataframe.loc["mean"]['Building B']
+L_Building_C = df2dataframe.loc["mean"]['Building C']
+L_Building_G = df2dataframe.loc["mean"]['Building G']
+L_Building_YG = df2dataframe.loc["mean"]['Building YG']
 ```
 
 ```{python}
@@ -331,7 +373,7 @@ df2dataframe.loc["mean"]
 ```
 
 ```{python}
-(32.276606+24.712070+4.118974+2.488569)/4
+Average_Primary = (HVAC_Building_G+HVAC_Building_YG+L_Building_G+L_Building_YG)/4
 ```
 
 ```{python}
@@ -339,7 +381,7 @@ df2dataframe.loc["mean"]
 ```
 
 ```{python}
-(37.542133+43.576555+5.912801+4.550033)/4
+Average_Secondary = (HVAC_Building_A+HVAC_Building_B+L_Building_A+L_Building_B)/4
 ```
 
 ```{python}
@@ -349,7 +391,7 @@ df2dataframe.loc["mean"]
 ```{python}
 objects = ("Primary Blocks(Y, YG)", 'Secondary Blocks(A, B)')
 y_pos = np.arange(len(objects))
-performance = [15.89905475, 22.895380499999998]
+performance = [Average_Primary, Average_Secondary]
 
 plt.bar(y_pos, performance, align='center', alpha=0.5)
 plt.xticks(y_pos, objects)
