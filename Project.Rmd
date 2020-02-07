@@ -143,11 +143,19 @@ Four_One_A = (HVAC_Building_A+L_Building_A)/2
 ```
 
 ```{python}
+Four_One_A
+```
+
+```{python}
 ##Average energy use in HVAC and lighting systems in Building B.
 ```
 
 ```{python}
 Four_One_B = (HVAC_Building_B+L_Building_B)/2
+```
+
+```{python}
+Four_One_B
 ```
 
 ```{python}
@@ -159,6 +167,10 @@ Four_One_C = (HVAC_Building_C+L_Building_C)/2
 ```
 
 ```{python}
+Four_One_C
+```
+
+```{python}
 ##Average energy use in HVAC and lighting systems in Building G.
 ```
 
@@ -167,11 +179,19 @@ Four_One_G = (HVAC_Building_G+L_Building_G)/2
 ```
 
 ```{python}
+Four_One_G
+```
+
+```{python}
 ##Average energy use in HVAC and lighting systems in Building YG.
 ```
 
 ```{python}
 Four_One_YG = (HVAC_Building_YG+L_Building_YG)/2 
+```
+
+```{python}
+Four_One_YG
 ```
 
 ```{python}
@@ -347,6 +367,11 @@ I will be using the ISF environment data sets as it shows the amount of energy t
 
 ```{python}
 df1dataframe = df1.describe()
+df1dataframe.loc["mean"]
+```
+
+```{python}
+df1dataframe = df1.describe()
 HVAC_Building_A = df1dataframe.loc["mean"]['Building A']
 HVAC_Building_B = df1dataframe.loc["mean"]['Building B']
 HVAC_Building_C = df1dataframe.loc["mean"]['Building C']
@@ -357,6 +382,11 @@ HVAC_Building_YG = df1dataframe.loc["mean"]['Building YG']
 
 ```{python}
 ##Code for the mean of the lighting systems of our school.
+```
+
+```{python}
+df2dataframe = df2.describe()
+df2dataframe.loc["mean"]
 ```
 
 ```{python}
@@ -377,11 +407,19 @@ Average_Primary = (HVAC_Building_G+HVAC_Building_YG+L_Building_G+L_Building_YG)/
 ```
 
 ```{python}
+Average_Primary
+```
+
+```{python}
 ##Code for average energy use of Secondary Blocks.
 ```
 
 ```{python}
 Average_Secondary = (HVAC_Building_A+HVAC_Building_B+L_Building_A+L_Building_B)/4
+```
+
+```{python}
+Average_Secondary
 ```
 
 ```{python}
@@ -403,74 +441,79 @@ plt.show()
 
 # Discussion
 
-<!-- #region {"heading_collapsed": true} -->
+
 ## Summary
-<!-- #endregion -->
 
-<!-- #region {"hidden": true} -->
+
 **In summary, what did you discover?**
-<!-- #endregion -->
 
-<!-- #region {"hidden": true} -->
-Your answer here:
-<!-- #endregion -->
 
-<!-- #region {"hidden": true} -->
+Sub-question 1:
+In subquestion one I discovered that A, B, YG and G block were much smaller when compared to the amount of energy used in C block. As A Block had 21.7(1DP), B Block had 24.1(1DP), YG Block had 13.6(1DP) and G Block had 18.2(1DP) kilowatts per hour, while C block had 90.4(1DP) kilowatts per hour, having an average difference of 71 kilowatts per hour(after adding all the values of the other blocks and looking at the difference.
+
+Sub-question 2:
+In subquestion two I discovered that the HVAC systems of our school actually uses more energy than our lighting systems. As the HVAC systems used 63.2(1DP) kilowatts per hour, while the lighting systems used 4.0(1DP) kilowatts per hour, having a big 59.1(1DP) difference of kilowatts.
+
+Sub-question 3:
+In subquestion three I discovered that the statistics that I found on the internet about the government's view shows that the average school in Hong Kong actually uses much more energy when compared to our school. As the "average school" uses 55.6(1DP) kilowatts per hour, while our school uses 33.6(1DP), having a difference of 22.0(1DP).
+
+Sub-question 4:
+In subquestion four I discovered that the secondary blocks of our school uses more energy when compared to the primary blocks. As the secondary buildings seems to use an average of 22.9(1DP) kilowatts per hour, while the primary blocks use an average of 15.9(1DP), having a small difference of 7.0(1DP).
+
+
 **What was most surprising? What made sense? How does this confirm or disprove other sources?**
-<!-- #endregion -->
 
-<!-- #region {"hidden": true} -->
-Your answer here:
-<!-- #endregion -->
 
-<!-- #region {"code_folding": [], "heading_collapsed": true} -->
+Sub-question 1:
+What suprised me the most was that YG block seemed to have a pretty significant difference when compared to the other blocks, as the primary students still seem to use the classrooms and facilities on a daily basis. Furthermore, the classrooms used in YG and G block are pretty simmilar when it comes to energy use and also quantity. However, the fact that C block used around 90 kilowatts of energy per hour does make sense, as most of the facilities in the building seem to use more energy, as the facilities would include the heating of the swimming pools, the bright lights in both the auditorium, gym area, squash courts etc.. By looking at the results, I can see that our school does seem to be a pretty "green school" as an article written by Marianne Bray from SCMP has said, having low stats such as the average of around 19.4 kilowatts used per hour. Even though C Block does use a high amount, the school has no control over this as some of the things inside the building can't be changed.
+
+Sub-question 2:
+What suprised me a lot was that the difference of energy used in the HVAC and lighting systems were so different, as I would think that the months where the temperatures might start to cool down, might of had been a phase where students and teachers would not need a heater or the air conditioning. However the lighting systems having such a low value made sense, as lights don't really need that much power to operate in the first place. By looking at the results we can tell that our school is pretty eco friendly, as an article written by Marianne Bray from SCMP seems to agree with us, I believe that the reason why it might be like this is due to knowing that our school does use solar energy, which might make a difference.
+
+Sub-question 3:
+What suprised me a lot was that the difference of kilowatts per hour were so big when compared between the average school in Hong Kong and our school, even though our school does promote saving energy when on campus, I didn't think that it would have such a big impact to lower its rates by that much when compared to other schools around Hong Kong. By looking at the results we can tell that our school is more eco friendly when compared to other schools, as there seems to be a 22 kilowatt per hour gap inbetween the two averages, this might be like this as our school uses solar energy and also encourages students and teachers to due specific things to be more "green".
+
+Sub-question 4:
+What suprised me a lot was that the primary blocks seemed to use less energy than the secondary blocks, as the students in secondary are always encouraged to save energy, by being given lecture to, enrolled in energy saving competitions etc.. However the facilities that the primary blocks have are smaller in size when compared to the secondary blocks, due to this happening it makes sense that they use less energy. Furthermore, primary students due tend to use some parts of the secondary block, which means that they play a role in using the energy in our buildings. By looking at the results we can tell that our school might not be that eco friendly in the secondary blocks, as there seems to be a slight gap between the two averages. I think that this might be because of how our primary blocks use solar energy. Furthermore, the facilities used in our secondary blocks might use more energy when compared to the primary blocks.
+
+<!-- #region {"code_folding": []} -->
 ## Considerations
 <!-- #endregion -->
 
-<!-- #region {"hidden": true} -->
 **It's important to recognize the limitations of our research as well. Describe a limitation of your dataset. Are there any known biases in the data?**
-<!-- #endregion -->
 
-<!-- #region {"hidden": true} -->
-Your answer here:
-<!-- #endregion -->
 
-<!-- #region {"hidden": true} -->
+The limitations of both data set 1 and 2 were that some buildings were not around when others started to collect data, as between the time period in which the older buildings were around to when the new buildings were built could create a huge difference in data collection, as there could be events which forced our school campus to use more energy within that time period. Another limitation would be data set 3, as we are not sure which school they chose to collect data from, as some schools might not be a normal primary/secondary school like ours, they could possiblt specialize in teaching something that uses a lot of energy throughout the entire year.
+
+
 **Describe an algorithmic choice that you made and how your results could have changed if you made that choice differently.**
-<!-- #endregion -->
 
-<!-- #region {"hidden": true} -->
-Your answer here:
-<!-- #endregion -->
 
-<!-- #region {"heading_collapsed": true} -->
+If I were to not divide the amount of years that the data was collected by the amount of energy used correctly(taking away the years if the energy for each extra energy consumer system was not used in that specific year) in data set 3, it would make my graphs and data extremly unreliable, which means that my data would not be able to support the points that I am trying to make throughout the entire project.
+
+
 ## Next Steps
-<!-- #endregion -->
 
-<!-- #region {"hidden": true} -->
-Let's go deeper.
-<!-- #endregion -->
 
-<!-- #region {"hidden": true} -->
 **Imagine you have time and access to research participants who are willing to talk to you or have you observe them. What qualitative questions would you ask them that cannot be answered with quantitative analysis?**
-<!-- #endregion -->
 
-<!-- #region {"hidden": true} -->
-Your answer here:
-<!-- #endregion -->
 
-<!-- #region {"hidden": true} -->
+1. What methods do you the school are already using that is effective in reducing energy use in extra energy consumer?
+2. What methods do you think the school could use to reduce energy use in extra energy consumers?
+3. What can be used to replace the job of the extra energy consumers and also reduct the amount of energy used?
+4. At which time of the year do you think HVAC system related energy consumers are not needed?
+5. At which time of the day do you think that lighting systems are not really needed?
+
+I would mainly choose questions that are based on personal opinions towards certain things of our school environment and to make it a fair questionnaire I will try to ask students or faculty from each grade level, so that I can get a basic understanding of what the majority of the school wants.
+
+
 **Who would you like to share these findings with, and why?**
-<!-- #endregion -->
 
-<!-- #region {"hidden": true} -->
-Your answer here:
-<!-- #endregion -->
 
-<!-- #region {"hidden": true} -->
+I would like to share these findings with the Shuyuan Sustainability Team, as I believe that the data will help them with understanding what they should try to improve on in the environmental aspect of our school and possibly also being able to use this data as evidence that would possibly help them in convining higher ranked people in our school's system to fund them or support them in their cause of making a change.
+
+
 **Why does it matter?**
-<!-- #endregion -->
 
-<!-- #region {"hidden": true} -->
-Your answer here:
-<!-- #endregion -->
+
+The reason why this matters is because of how small steps like these can possibly create a bigger and more effective change in the overall environment of Hong Kong or possibly the world as this cause starts to spread across the world. If schools around Hong Kong could put the effort into helping create a more healthy environment, it would not only create a better space for them to live in, but also for the people who are living in this country.
